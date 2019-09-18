@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    margin: 0;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.grid__container {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100px 100px 100px;
+    
+    /* * The values can be px, %, em, rem */
+    /* * Each value represents a row or column */
+    /* * values can be mixed: 100px 30% 5rem */
+    /* ? In this case, we have 4 columns with a width of 25% each */
+    /* ? and 3 rows with a height of 100px each  */
+}
+
+.grid__container--shorthand {
+    display: grid;
+    grid-template: 100px 100px 100px / 25% 25% 25% 25%; 
+    
+    /* * We have a shorthand version to declare the dimensions of our grid */
+    /* * it's syntax is: rows / columns */
+    /* ? We have the same result as the regular class */
+}
+
+.grid__item {
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: rgba(0, 0, 0, .1);
+}
+
+.subgrid__container {
+    display: grid;
+    grid-template: 50% 50% / 50% 50%;
+}
