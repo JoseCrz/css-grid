@@ -53,3 +53,9 @@ h1 {
     display: grid;
     grid-template: 50% 50% / 50% 50%;
 }
+
+.gapped-grid__container {
+    display: grid;
+    grid-template: 100px 100px 100px 100px / 33% 33% 33%;
+    gap: 15px;
+}
