@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+.grid__container {
+    display: grid;
+    grid-template: repeat(2, 200px) / repeat(7, 1fr);
+    gap: 5px;
+}
+
+.grid__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__item:nth-child(1) {
+    background: #D0E562;
+    grid-column: 1 / span 3;
+    
+    /* * grid-row works just like grid-column */
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.grid__item:nth-child(2) {
+    background: #B6D369;
+    grid-column: 4 / span 2;
+
+    /* * We can use the shorthand version and span aswell */
+    grid-row: 1 / span 2;
+}
+
+.grid__item:nth-child(3) {
+    background: #93C48B;
+    grid-column: 6 / span 2;
+}
+
+.grid__item:nth-child(4) {
+    background: #898952;
+}
+
+.grid__item:nth-child(5) {
+    background: #B2945B;
+}
