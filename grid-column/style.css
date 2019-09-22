@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: #FFFDF7;
+}
+
+.grid__container {
+    min-height: inherit;
+    display: grid;
+    gap: 5px;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+}
+
+.grid__item {
+    border: 2px solid rgb(51, 51, 51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.grid__item:nth-child(1) {
+    background: #2CA58D;
+    border-color: #2CA58D;
+    
+    /* * We can define how many columns or element it's going use without assigning grid-areas */
+    /* * For that we are going to use grid-column */
+    /* * The values reference to grid lines not grid-columns per se*/
+    /* ? In this case, our element it's going to start at grid line 1 and end at grid line 3 */
+    /* ? Thus, it's going to be the size of 2 columns */
+
+    grid-column-start: 1;
+    grid-column-end: 3;    
+}
+
+.grid__item:nth-child(5) {
+    background: #E2F1AF;
+    border-color: #E2F1AF;
+    
+    /* * We can use the shorthand version: */
+    /* * grid-column: start / end */
+    grid-column: 2 / 4; 
+}
+
+.grid__item:nth-child(7) {
+    background: #84BC9C;
+    border-color: #84BC9C;
+
+    /* * If we want our element to always use all columns  */
+    /* * but we don't know how many we're going to end having we can use "-1" as end value */
+    grid-column: 1 / -1;
+}
+
+.grid__item:nth-child(10) {
+    background: #0A2342;
+    border-color: #0A2342;
+    color: #FFFDF7;
+    
+    /* * We can also tell our element of many lines more it's going to use without using the specific number */
+    /* * to achieve that, we're going to use "span" + the amount of grid lines it's going to use */
+    /* ? In this case, we're telling our element it's going to start at grid line 1 and end 2 grid lines after */
+    grid-column: 3 / span 2;
+}
