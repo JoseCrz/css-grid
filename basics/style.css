@@ -81,6 +81,7 @@ h1 {
     display: grid;
     grid-template: repeat(4, 100px) / repeat(3, minmax(200px, 1fr));
     gap: 5px;
+    
     /* * minmax() takes 2 parameteres: (min-value, max-value) */
     /* ? we can use this function within repeat() */
 }
