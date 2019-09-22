@@ -59,3 +59,11 @@ h1 {
     grid-template: 100px 100px 100px 100px / 33% 33% 33%;
     gap: 15px;
 }
+
+.fr-grid__container {
+    display: grid;
+    grid-template: 100px 100px 100px 100px / 1fr 1fr 1fr;
+    gap: 10px;
+
+    /* *  fr stands for "fraction", a fraction of the space the grid has available. */
+}
