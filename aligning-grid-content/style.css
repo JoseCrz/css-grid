@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.grid__container {
+    min-height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template: repeat(4, 100px) / repeat(3, 200px);
+
+    /* * We can align our whole grid in a very similar way like we align flex items*/
+    /* * The properties are "justify-content" for X and "align-content" for Y */
+    /* * The values are basically the same: start, end, center, stretch, space-between, space-around and space-evenly */
+    /* * space-around, space-between, space-evenly behave just like they did with display: flex */
+    /* ? In this example we're going to align the whole grid to the center */
+    justify-content: center;
+    align-content: center;
+}
+
+.grid__item {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
