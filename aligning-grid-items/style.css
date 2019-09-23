@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.grid__container {
+    min-height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+
+    /* * By default, the content of each grid item is going to use all the space that has available */
+    /* ? In this case, 1fr */
+
+    /* * But, if for any reason we want to modify this behaviour,*/
+    /* * we can do so using "justify-items" for X and "align-items" for Y  */
+    /* * The values for anyone of those can be: start, end, center or stretch(default) */
+    /* * By doing so, each item it's going to only use the space that it's content needs */
+    justify-items: center;
+    align-items: center;
+}
+
+.grid__item {
+    background: #519872;
+}
+
+.grid__item:nth-child(10) {
+    background: #34252F;
+    color: white;
+
+    /* * If we want an item to have a different alignment, we can use "justify-self" and "align-self" */
+    /* * Both properties work like the general ones */
+    /* ? in this case, the 10th item it's going to be align to the bottom-left corner */
+    justify-self: end;
+    align-self: end;
+}
