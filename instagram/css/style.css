@@ -7,6 +7,13 @@ body {
     font-family: sans-serif;
 }
 
+.posts__container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 300px));
+    gap: 30px;
+    justify-content: center;
+}
+
 .post {
     display: inline-block;
     position: relative;
