@@ -15,6 +15,11 @@ body {
     font-family: var(--font);
 }
 
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 .hero {
     background: var(--primary-color);
     color: var(--light-text);
@@ -63,4 +68,32 @@ body {
 
 .form__button:hover {
     transform: translateY(-5px);
+}
+
+.hero__countdown {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.countdown__title {
+    margin-bottom: 0;
+}
+
+.countdown__date {
+    margin: 0;
+    font-weight: bold;
+}
+
+.countdown__item {
+    font-size: 1.8em;
+}
+
+.countdown__item::after {
+    content: ":";
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.countdown__item:last-child::after {
+    display: none;
 }
