@@ -65,8 +65,10 @@ figure {
 }
 
 .header {
+    height: 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: white;
 }
 
@@ -78,7 +80,19 @@ figure {
     display: flex;
 }
 
+.app__grid {
+    max-height: calc(100vh - 60px);
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "navbar content content content"
+                        "navbar content content content"
+                        "navbar content content content"
+                        "navbar content content content";
+}
+
 .navbar {
+    grid-area: navbar;
     background: var(--accent-color);
 }
 
@@ -89,6 +103,11 @@ figure {
 
 .navbar__item {
     font-size: 30px;
+}
+
+.content {
+    grid-area: content;
+    overflow: scroll;
 }
 
 .carousel {
