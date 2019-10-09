@@ -2,6 +2,7 @@
     --body-color: #FAFAFA;
     --font: 'Arimo', sans-serif;
     --accent-color: #2c3e50;
+    --light-text: white;
 }
 
 * {
@@ -28,8 +29,17 @@ body {
 .header {
     grid-area: header;
     background: var(--accent-color);
-    color: white;
+    color: var(--light-text);
     height: inherit;
+}
+
+.playlist__link, .friends__link {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+.playlist__item, .friends__item {
+    margin-bottom: 10px;
 }
 
 .content {
