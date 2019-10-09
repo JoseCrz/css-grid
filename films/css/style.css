@@ -1,0 +1,32 @@
+:root {
+    --accent-color: #7EE879;
+    --body-color: #FAFAFA;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    margin: 0;
+    background: var(--body-color);
+}
+
+figure {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+}
+
+.header__search-bar {
+    width: 30%;
+}
+
+.header__profile {
+    display: flex;
+}
