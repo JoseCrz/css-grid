@@ -1,0 +1,12 @@
+:root {
+    --body-color: #FAFAFA;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--body-color);
+    margin: 0;
+}
