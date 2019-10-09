@@ -63,6 +63,8 @@ body {
 
 .video {
     grid-area: video;
+    height: 100%;
+    width: 100%;
 }
 
 .video-details {
