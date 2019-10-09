@@ -78,6 +78,7 @@ body {
     border: 1px solid #dbdbe2;
     border-radius: 5px;
     margin: 10px 0;
+    outline: none;
 }
 
 .form__button {
@@ -127,12 +128,50 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 834px) {
+    .hero {
+        font-size: 14px;
+    }
+    
+    .hero__form {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .hero__description {
+        width: 90%;
+        margin: 0 auto;
+    }
     .hero__grid {
         grid-template-columns: 150px 1fr;
         grid-template-areas:"badge title "
                          "description description"
                          "form form"
                          "countdown countdown";
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        font-size: 12px;
+    }
+
+    .hero__title {
+        font-size: 2em;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .hero__badge-container {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    .hero__grid {
+        grid-template-columns: minmax(320px, 1fr);
+        grid-template-areas:"badge"
+                         "title"
+                         "description"
+                         "form"
+                         "countdown";
     }
 }
