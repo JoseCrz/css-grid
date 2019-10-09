@@ -63,23 +63,6 @@ body {
 figure {
     margin: 0;
 }
-
-.header {
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-}
-
-.header__search-bar {
-    width: 30%;
-}
-
-.header__profile {
-    display: flex;
-}
-
 .app__grid {
     max-height: 100vh;
     display: grid;
@@ -89,9 +72,35 @@ figure {
                          "navbar content";
 }
 
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 0 1%;
+}
+
+.header__search-bar {
+    width: 50%;
+    font-size: 1.5em;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.header__profile {
+    display: flex;
+}
+
 .navbar {
     grid-area: navbar;
     background: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar__list {
