@@ -1,5 +1,6 @@
 :root {
     --body-color: #FAFAFA;
+    --font: 'Arimo', sans-serif;
 }
 
 * {
@@ -8,5 +9,6 @@
 
 body {
     background: var(--body-color);
+    font-family: var(--font);
     margin: 0;
 }
