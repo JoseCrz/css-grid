@@ -1,7 +1,43 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?dh3cji');
+    src:  url('../fonts/icomoon.eot?dh3cji#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?dh3cji') format('truetype'),
+      url('../fonts/icomoon.woff?dh3cji') format('woff'),
+      url('../fonts/icomoon.svg?dh3cji#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-download:before {
+    content: "\e9c2";
+  }
+  .icon-share:before {
+    content: "\ea82";
+  }
+  
+
 :root {
     --body-color: #FAFAFA;
     --font: 'Arimo', sans-serif;
     --accent-color: #2c3e50;
+    --accent-gradient: linear-gradient(to top right, #FF416C, #FF4B2B);
     --light-text: white;
 }
 
@@ -69,6 +105,43 @@ body {
 
 .video-details {
     grid-area: video-details;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.video-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-actions__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.add-button {
+    padding: 12px 24px;
+    background: var(--accent-gradient);
+    border: 1px solid transparent;
+    color: var(--light-text);
+    font-family: var(--font);
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.buttons__button {
+    color: gray;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.buttons__button:hover {
+    color: black;
 }
 
 .comment-box {
