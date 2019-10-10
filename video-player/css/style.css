@@ -233,12 +233,13 @@ figure {
 }
 
 .comments, .suggestions {
-    max-height: 200px;
+    max-height: 100%;
     overflow: scroll;
 }
 
 .suggestion-box {
     grid-area: suggestion-box;
+    max-height: 100%;
 }
 
 .suggestion {
