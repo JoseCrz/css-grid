@@ -42,6 +42,7 @@
     --green: #2ecc71;
     --blue: #3498db;
     --purple: #9b59b6;
+    --divider-color: #BDBDBD;
 }
 
 * {
@@ -54,6 +55,9 @@ body {
     margin: 0;
 }
 
+figure {
+    margin: 0;
+}
 .app {
     height: 100vh;
 }
@@ -188,7 +192,7 @@ body {
 }
 
 .comment__profile-pic {
-    width: 50px;
+    width: 45px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
@@ -205,4 +209,21 @@ body {
 
 .suggestion-box {
     grid-area: suggestion-box;
+}
+
+.suggestion {
+    text-align: center;
+}
+
+.suggestion__preview {
+    width: 85%;
+}
+
+.suggestion__title {
+    margin: 0;
+}
+
+.suggestion__divider {
+    width: 80%;
+    border: 1px solid var(--divider-color);
 }
