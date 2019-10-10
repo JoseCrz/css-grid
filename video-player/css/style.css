@@ -39,6 +39,9 @@
     --accent-color: #2c3e50;
     --accent-gradient: linear-gradient(to top right, #FF416C, #FF4B2B);
     --light-text: white;
+    --green: #2ecc71;
+    --blue: #3498db;
+    --purple: #9b59b6;
 }
 
 * {
@@ -129,6 +132,7 @@ body {
     font-size: 1em;
     cursor: pointer;
     border-radius: 50px;
+    font-weight: bold;
 }
 
 .buttons__button {
@@ -142,6 +146,25 @@ body {
 
 .buttons__button:hover {
     color: black;
+}
+
+.categories__category {
+    text-decoration: none;
+    color: var(--light-text);
+    padding: 6px 12px;
+    border-radius: 50px;
+}
+
+.categories__category--indie {
+    background: var(--green);
+}
+
+.categories__category--rock {
+    background: var(--blue);
+}
+
+.categories__category--trending {
+    background: var(--purple);
 }
 
 .comment-box {
