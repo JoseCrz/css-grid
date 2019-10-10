@@ -36,7 +36,8 @@
 :root {
     --body-color: #FAFAFA;
     --font: 'Arimo', sans-serif;
-    --accent-color: #2c3e50;
+    --header-color: #2c3e50;
+    --accent-color: #FF4B2B;
     --accent-gradient: linear-gradient(to top right, #FF416C, #FF4B2B);
     --light-text: white;
     --green: #2ecc71;
@@ -71,9 +72,37 @@ figure {
 
 .header {
     grid-area: header;
-    background: var(--accent-color);
+    background: var(--header-color);
     color: var(--light-text);
     height: inherit;
+    padding: 0 10px;
+}
+
+.header__logo {
+    text-align: center;
+}
+
+.list__title {
+    font-weight: bold;
+}
+
+.header__playlist, .header__friends {
+    max-height: 50%;
+    overflow: scroll;
+}
+
+.playlist__list, .friends__list {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.logo__emphasis {
+    color: var(--accent-color);
+}
+
+.playlist__item, .friends__item {
+    margin-bottom: 10px;
+    list-style: none;
 }
 
 .playlist__link, .friends__link {
@@ -81,8 +110,9 @@ figure {
     text-decoration: none;
 }
 
-.playlist__item, .friends__item {
-    margin-bottom: 10px;
+
+.playlist__item:hover, .playlist__link:hover, .friends__item:hover, .friends__link:hover {
+    color: var(--accent-color);
 }
 
 .content {
