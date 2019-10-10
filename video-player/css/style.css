@@ -169,6 +169,33 @@ body {
 
 .comment-box {
     grid-area: comment-box;
+    padding: 0 10px;
+}
+
+.comment-box__input {
+    width: 100%;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    padding: 12px 6px;
+}
+
+.comment {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.comment__profile-pic {
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.comment__text {
+    margin: 0;
 }
 
 .comments, .suggestions {
